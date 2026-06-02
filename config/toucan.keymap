@@ -279,8 +279,8 @@ ZMK_BEHAVIOR(lt_fast, hold_tap,
             display-name = "NAV";
             bindings = <
        &none        &kp N1       &kp N2       &kp N3       &kp N4       &kp N5             &kp N6       &kp N7       &kp N8       &kp N9       &kp N0       &none
-       &none        &sk LALT     &sk LGUI     &sk LSHIFT   &sk LCTRL    &sk HYPER          &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &none        &none
-       &none        &none        &none        &none        &sk RALT     &sk MEH            &kp DELETE   &kp BSPC     &kp PG_DN    &kp PG_UP    &none        &none
+       &none        &sk LALT     &sk LGUI     &sk LSHIFT   &sk LCTRL    &sk HYPER          &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp BSPC    &none
+       &none        &none        &none        &none        &sk RALT     &sk MEH            &none        &mkp LCLK    &mkp RCLK    &mkp MCLK    &kp DELETE  &none
                                                           &none        &kp CAPS     &caps_word         &none        &none        &none
             >;
         };
@@ -290,7 +290,7 @@ ZMK_BEHAVIOR(lt_fast, hold_tap,
             bindings = <
        &none        &none        &kp LG(W)    &kp LG(L)    &kp LG(R)    &kp LG(T)          &kp KP_PLUS  &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp KP_ASTR  &none
        &none        &kp NAVBACK  &kp NAVFWD   &kp HOME     &kp END      &kp LG(LS(T))      &kp KP_MINUS &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp RET      &none
-       &none        &none        &none        &kp PREVTAB  &kp NEXTTAB  &kp LG(N)          &kp KP_EQUAL &kp KP_N1    &kp KP_N2    &kp KP_N3    &kp KP_SLASH &none
+       &none        &kp PG_UP    &kp PG_DN    &kp PREVTAB  &kp NEXTTAB  &kp LG(N)          &kp KP_EQUAL &kp KP_N1    &kp KP_N2    &kp KP_N3    &kp KP_SLASH &none
                                                           &none        &none        &none              &td_comma_semi &td_dot_colon &kp KP_N0
             >;
         };
