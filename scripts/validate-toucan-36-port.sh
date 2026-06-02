@@ -83,7 +83,7 @@ compact = " ".join(
     " ".join(line.split("//", 1)[0].split())
     for line in base_body.splitlines()
 )
-expected_thumb = "&layer_hold_quick_layer SYMB NUMP &kp ESC &kp TAB &mt LSHFT SEMI &lt NAV SPACE &none"
+expected_thumb = "&lt_fast SYMB ESC &kp ESC &lt NUMP TAB &kp LSHFT &mo NAV &kp SPACE"
 if expected_thumb not in compact:
     print("FAIL: base layer thumb row does not match selected mapping", file=sys.stderr)
     sys.exit(1)
@@ -99,7 +99,8 @@ required = [
     "#define RB4 34",
     "#define LH2 36",
     "#define RH2 41",
-    "ZMK_BEHAVIOR(layer_hold_quick_layer",
+    "td_comma_semi: tap_dance_comma_semi",
+    "td_dot_colon: tap_dance_dot_colon",
     "&studio_unlock",
 ]
 for needle in required:
