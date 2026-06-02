@@ -39,7 +39,7 @@ layers:
   - ''
   - {t: Nump, h: Sym}
   - Esc
-  - {t: Tab, h: Misc}
+  - Tab
   - {t: ;, h: Sft}
   - {t: Space, h: Nav}
   - ''
@@ -92,56 +92,13 @@ layers:
   - ''
   - ''
   - ''
-  MISC:
+  NUMP:
   - ''
   - {t: FUNC, h: sticky}
   - Cmd+W
   - Cmd+L
   - Cmd+R
   - Cmd+T
-  - F1
-  - F2
-  - F3
-  - F4
-  - ''
-  - ''
-  - ''
-  - Cmd+[
-  - Cmd+]
-  - HOME
-  - END
-  - Cmd+Sft+T
-  - F5
-  - F6
-  - F7
-  - F8
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - Ctl+Sft+TAB
-  - Ctl+TAB
-  - Cmd+N
-  - F9
-  - F10
-  - F11
-  - F12
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  NUMP:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
   - KP PLUS
   - KP 7
   - KP 8
@@ -149,11 +106,11 @@ layers:
   - KP ASTERISK
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - Cmd+[
+  - Cmd+]
+  - HOME
+  - END
+  - Cmd+Sft+T
   - KP MINUS
   - KP 4
   - KP 5
@@ -163,9 +120,9 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
+  - Ctl+Sft+TAB
+  - Ctl+TAB
+  - Cmd+N
   - ':'
   - KP 1
   - KP 2
@@ -185,10 +142,10 @@ layers:
   - OUT BLE
   - ''
   - BT CLR
-  - ''
-  - ''
-  - ''
-  - ''
+  - F1
+  - F2
+  - F3
+  - F4
   - ''
   - ''
   - ''
@@ -197,10 +154,10 @@ layers:
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
-  - ''
-  - ''
-  - ''
-  - ''
+  - F5
+  - F6
+  - F7
+  - F8
   - ''
   - ''
   - ''
@@ -211,10 +168,10 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - F9
+  - F10
+  - F11
+  - F12
   - ''
   - ''
   - ''
