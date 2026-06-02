@@ -37,12 +37,12 @@ layers:
   - .
   - /
   - ''
-  - {t: Nump, h: Sym}
+  - {t: Esc, h: Sym}
   - Esc
-  - Tab
-  - {t: ;, h: Sft}
-  - {t: Space, h: Nav}
-  - ''
+  - {t: Tab, h: Nump}
+  - Sft
+  - Nav
+  - Space
   SYMB: ['', '!', '@', '`', ^, $, '?', '[', ']', '', '', '', '', '|', '&', '"', '-', '=', '*', (, ), <, '>', '', '', \, '%', '''', _, +, '#', '{', '}', '', '~', '',
     '', '', '', ':', '', '']
   NAV:
@@ -94,7 +94,7 @@ layers:
   - ''
   NUMP:
   - ''
-  - {t: FUNC, h: sticky}
+  - ''
   - Cmd+W
   - Cmd+L
   - Cmd+R
@@ -132,12 +132,12 @@ layers:
   - ''
   - ''
   - ''
-  - {t: ',', h: _}
-  - {t: ., h: Space}
+  - {t: ',', h: ;}
+  - {t: ., h: ':'}
   - KP 0
   FUNC:
   - ''
-  - {type: held}
+  - ''
   - OUT USB
   - OUT BLE
   - ''
