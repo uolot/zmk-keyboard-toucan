@@ -271,7 +271,7 @@ ZMK_BEHAVIOR(lt_fast, hold_tap,
        &none  &kp EXCL  &kp AT       &kp GRAVE  &kp CARET  &kp DLLR      &kp QUESTION  &kp LBKT  &kp RBKT  &none   &none      &none
        &none  &kp PIPE  &kp AMPS     &kp DQT    &kp MINUS  &kp EQUAL     &kp STAR      &kp LPAR  &kp RPAR  &kp LT  &kp GT    &none
        &none  &kp BSLH  &kp PERCENT  &kp SQT    &kp UNDER  &kp PLUS      &kp HASH      &kp LBRC  &kp RBRC  &none   &kp TILDE &none
-                                               &none        &none         &none         &kp COLON &none     &none
+                                               &none        &none         &none         &sk LCTRL &sk LSHIFT &sk LGUI
             >;
         };
 
