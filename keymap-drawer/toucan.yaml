@@ -109,7 +109,7 @@ layers:
   - DOWN
   - UP
   - RIGHT
-  - ''
+  - BSPC
   - ''
   - ''
   - ''
@@ -117,11 +117,11 @@ layers:
   - ''
   - {t: AltGr, h: sticky}
   - {t: Meh, h: sticky}
-  - DELETE
-  - BSPC
-  - PG DN
-  - PG UP
   - ''
+  - '&mkp LCLK'
+  - '&mkp RCLK'
+  - '&mkp MCLK'
+  - DELETE
   - ''
   - ''
   - 'Caps
@@ -159,8 +159,8 @@ layers:
   - RET
   - ''
   - ''
-  - ''
-  - ''
+  - PG UP
+  - PG DN
   - Ctl+Sft+TAB
   - Ctl+TAB
   - Cmd+N
