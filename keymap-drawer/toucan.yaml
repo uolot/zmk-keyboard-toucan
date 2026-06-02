@@ -1,0 +1,297 @@
+layout: {zmk_keyboard: toucan}
+layers:
+  BASE:
+  - ''
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - ''
+  - ''
+  - {t: A, h: Alt}
+  - {t: S, h: Cmd}
+  - {t: D, h: Sft}
+  - {t: F, h: Ctl}
+  - {t: G, h: Hyper}
+  - {t: H, h: Hyper}
+  - {t: J, h: Ctl}
+  - {t: K, h: Sft}
+  - {t: L, h: Cmd}
+  - {t: RET, h: Alt}
+  - ''
+  - ''
+  - Z
+  - X
+  - C
+  - {t: V, h: AltGr}
+  - {t: B, h: Meh}
+  - {t: N, h: Meh}
+  - {t: M, h: AltGr}
+  - ','
+  - .
+  - /
+  - ''
+  - ''
+  - {t: Esc, h: Sym}
+  - {t: Tab, h: Misc}
+  - {t: ;, h: Sft}
+  - {t: Space, h: Nav}
+  - ''
+  SYMB: ['', '!', '@', '`', ^, $, '?', '[', ']', '', '', '', '', '|', '&', '"', '-', '=', '*', (, ), <, '>', '', '', \, '%', '''', _, +, '#', '{', '}', '', '~', '',
+    '', '', '', ':', '', '']
+  NAV:
+  - ''
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - ''
+  - ''
+  - {t: Alt, h: sticky}
+  - {t: Cmd, h: sticky}
+  - {t: Sft, h: sticky}
+  - {t: Ctl, h: sticky}
+  - {t: Hyper, h: sticky}
+  - LEFT
+  - DOWN
+  - UP
+  - RIGHT
+  - RET
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: AltGr, h: sticky}
+  - {t: Meh, h: sticky}
+  - DELETE
+  - BSPC
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - 'Caps
+
+    lock'
+  - 'Caps
+
+    word'
+  - ''
+  - ''
+  - ''
+  MISC:
+  - ''
+  - {t: FUNC, h: sticky}
+  - Cmd+W
+  - Cmd+L
+  - Cmd+R
+  - Cmd+T
+  - '&msc SCRL_LEFT'
+  - '&msc SCRL_DOWN'
+  - '&msc SCRL_UP'
+  - '&msc SCRL_RIGHT'
+  - ''
+  - ''
+  - ''
+  - Cmd+[
+  - Cmd+]
+  - HOME
+  - END
+  - Cmd+Sft+T
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_UP'
+  - '&mmv MOVE_RIGHT'
+  - '&mkp LCLK'
+  - ''
+  - ''
+  - ''
+  - ''
+  - Ctl+Sft+TAB
+  - Ctl+TAB
+  - Cmd+N
+  - ''
+  - PG DN
+  - PG UP
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&mkp RCLK'
+  - '&mkp MCLK'
+  - ''
+  NUMP:
+  - ''
+  - {t: NUMP, h: toggle}
+  - ''
+  - ''
+  - ''
+  - ''
+  - KP PLUS
+  - KP 7
+  - KP 8
+  - KP 9
+  - KP ASTERISK
+  - ''
+  - ''
+  - ''
+  - ''
+  - ','
+  - {type: held}
+  - {type: held}
+  - KP MINUS
+  - KP 4
+  - KP 5
+  - KP 6
+  - KP EQUAL
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - .
+  - KP 1
+  - KP 2
+  - KP 3
+  - KP SLASH
+  - ''
+  - ''
+  - _
+  - SPACE
+  - ':'
+  - KP 0
+  - ''
+  FUNC:
+  - ''
+  - {t: BASE, h: sticky, type: held}
+  - OUT USB
+  - OUT BLE
+  - ''
+  - BT CLR
+  - F10
+  - F7
+  - F8
+  - F9
+  - ''
+  - ''
+  - ''
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - F11
+  - F4
+  - F5
+  - F6
+  - ''
+  - ''
+  - ''
+  - 'Boot
+
+    loader'
+  - 'Studio
+
+    unlock'
+  - ''
+  - ''
+  - ''
+  - F12
+  - F1
+  - F2
+  - F3
+  - 'Boot
+
+    loader'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+combos:
+- p: [13, 14, 15, 16]
+  k: Reset
+  l: [BASE, SYMB, NAV, MISC, NUMP, FUNC]
+- p: [19, 20, 21, 22]
+  k: Reset
+  l: [BASE, SYMB, NAV, MISC, NUMP, FUNC]
+- p: [1, 2, 3, 4]
+  k: 'Soft
+
+    off'
+  l: [BASE, SYMB, NAV, MISC, NUMP, FUNC]
+- p: [7, 8, 9, 10]
+  k: 'Soft
+
+    off'
+  l: [BASE, SYMB, NAV, MISC, NUMP, FUNC]
+- p: [16, 17]
+  k: {t: NUMP, h: NUMP}
+  l: [BASE, NUMP]
+- p: [15, 16]
+  k: RET
+  l: [BASE, NUMP]
+- p: [19, 20]
+  k: RET
+  l: [BASE, NUMP]
+- p: [14, 15]
+  k: BSPC
+  l: [BASE, NUMP]
+- p: [20, 21]
+  k: BSPC
+  l: [BASE, NUMP]
+- p: [26, 27]
+  k: Cmd+X
+  l: [BASE]
+- p: [27, 28]
+  k: Cmd+C
+  l: [BASE]
+- p: [28, 29]
+  k: Cmd+V
+  l: [BASE]
+- p: [26, 27, 28]
+  k: Cmd+A
+  l: [BASE]
+- p: [31, 32, 33]
+  k: MUTE
+  l: [BASE]
+- p: [31, 32]
+  k: VOL DN
+  l: [BASE]
+- p: [32, 33]
+  k: VOL UP
+  l: [BASE]
+- p: [6, 7]
+  k: PREV
+  l: [BASE]
+- p: [7, 8]
+  k: PLAY PAUSE
+  l: [BASE]
+- p: [8, 9]
+  k: NEXT
+  l: [BASE]
+- p: [3, 4]
+  k: BRI DN
+  l: [BASE]
+- p: [2, 3]
+  k: BRI UP
+  l: [BASE]
