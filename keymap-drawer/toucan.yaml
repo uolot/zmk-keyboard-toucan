@@ -84,7 +84,7 @@ layers:
   - {type: held}
   - ''
   - {t: Ctl, h: sticky}
-  - {t: Sft, h: sticky}
+  - {t: ▽, type: trans}
   - {t: Cmd, h: sticky}
   NAV:
   - ''
@@ -123,10 +123,10 @@ layers:
   - '&mkp MCLK'
   - DELETE
   - ''
-  - ''
   - 'Caps
 
     lock'
+  - {t: ▽, type: trans}
   - 'Caps
 
     word'
