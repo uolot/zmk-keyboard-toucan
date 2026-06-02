@@ -75,7 +75,7 @@ parse_config:
       "&hmr RALT LBRC": { t: "{", h: AltGr },
       "&layer_hold_quick_layer SYMB NUMP": { t: Nump, h: Sym },
       "&kp ESC": Esc,
-      "&lt MISC TAB": { t: Tab, h: Misc },
+      "&kp TAB": Tab,
       "&mt LSHFT SEMI": { t: ";", h: Sft },
       "&lt NAV SPACE": { t: Space, h: Nav },
       "&td_comma_under": { t: ",", h: "_" },

@@ -46,7 +46,7 @@ import sys
 
 keymap = Path("config/toucan.keymap").read_text()
 layers = re.findall(r'^\s*(\w+_layer)\s*\{[^{}]*?bindings = <(.*?)^\s*>;', keymap, re.S | re.M)
-expected = ["base_layer", "symbols_layer", "navigation_layer", "misc_layer", "numpad_layer", "func_layer"]
+expected = ["base_layer", "symbols_layer", "navigation_layer", "numpad_layer", "func_layer"]
 found = [name for name, _ in layers]
 if found != expected:
     print(f"FAIL: layer order/names are {found}, expected {expected}", file=sys.stderr)
@@ -83,7 +83,7 @@ compact = " ".join(
     " ".join(line.split("//", 1)[0].split())
     for line in base_body.splitlines()
 )
-expected_thumb = "&layer_hold_quick_layer SYMB NUMP &kp ESC &lt MISC TAB &mt LSHFT SEMI &lt NAV SPACE &none"
+expected_thumb = "&layer_hold_quick_layer SYMB NUMP &kp ESC &kp TAB &mt LSHFT SEMI &lt NAV SPACE &none"
 if expected_thumb not in compact:
     print("FAIL: base layer thumb row does not match selected mapping", file=sys.stderr)
     sys.exit(1)
@@ -91,6 +91,8 @@ if expected_thumb not in compact:
 required = [
     "#define LT0 1",
     "#define RT4 10",
+    "#define NUMP 3",
+    "#define FUNC 4",
     "#define LM0 13",
     "#define RM4 22",
     "#define LB0 25",
