@@ -78,8 +78,8 @@ layers:
   - {t: Meh, h: sticky}
   - DELETE
   - BSPC
-  - ''
-  - ''
+  - PG DN
+  - PG UP
   - ''
   - ''
   - ''
@@ -99,10 +99,10 @@ layers:
   - Cmd+L
   - Cmd+R
   - Cmd+T
-  - ''
-  - ''
-  - ''
-  - ''
+  - F1
+  - F2
+  - F3
+  - F4
   - ''
   - ''
   - ''
@@ -111,10 +111,10 @@ layers:
   - HOME
   - END
   - Cmd+Sft+T
-  - ''
-  - ''
-  - ''
-  - ''
+  - F5
+  - F6
+  - F7
+  - F8
   - ''
   - ''
   - ''
@@ -123,20 +123,61 @@ layers:
   - Ctl+Sft+TAB
   - Ctl+TAB
   - Cmd+N
-  - ''
-  - PG DN
-  - PG UP
-  - ''
-  - ''
-  - ''
+  - F9
+  - F10
+  - F11
+  - F12
   - ''
   - ''
   - ''
   - ''
   - ''
   - ''
-  NUMP: ['', '', '', '', '', '', KP PLUS, KP 7, KP 8, KP 9, KP ASTERISK, '', '', '', '', ',', '', SPACE, KP MINUS, KP 4, KP 5, KP 6, KP EQUAL, '', '', '', '', '',
-    '', '', ':', KP 1, KP 2, KP 3, KP SLASH, '', '', _, SPACE, ',', ., KP 0]
+  - ''
+  - ''
+  NUMP:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - KP PLUS
+  - KP 7
+  - KP 8
+  - KP 9
+  - KP ASTERISK
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - KP MINUS
+  - KP 4
+  - KP 5
+  - KP 6
+  - KP EQUAL
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ':'
+  - KP 1
+  - KP 2
+  - KP 3
+  - KP SLASH
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: ',', h: _}
+  - {t: ., h: Space}
+  - KP 0
   FUNC:
   - ''
   - {type: held}
@@ -144,10 +185,10 @@ layers:
   - OUT BLE
   - ''
   - BT CLR
-  - F1
-  - F2
-  - F3
-  - F4
+  - ''
+  - ''
+  - ''
+  - ''
   - ''
   - ''
   - ''
@@ -156,10 +197,10 @@ layers:
   - {t: BT, h: '2'}
   - {t: BT, h: '3'}
   - {t: BT, h: '4'}
-  - F5
-  - F6
-  - F7
-  - F8
+  - ''
+  - ''
+  - ''
+  - ''
   - ''
   - ''
   - ''
@@ -170,10 +211,10 @@ layers:
   - ''
   - ''
   - ''
-  - F9
-  - F10
-  - F11
-  - F12
+  - ''
+  - ''
+  - ''
+  - ''
   - ''
   - ''
   - ''
