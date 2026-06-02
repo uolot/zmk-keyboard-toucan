@@ -271,7 +271,7 @@ ZMK_BEHAVIOR(lt_fast, hold_tap,
        &none  &kp EXCL  &kp AT       &kp GRAVE  &kp CARET  &kp DLLR      &kp QUESTION  &kp LBKT  &kp RBKT  &none   &none      &none
        &none  &kp PIPE  &kp AMPS     &kp DQT    &kp MINUS  &kp EQUAL     &kp STAR      &kp LPAR  &kp RPAR  &kp LT  &kp GT    &none
        &none  &kp BSLH  &kp PERCENT  &kp SQT    &kp UNDER  &kp PLUS      &kp HASH      &kp LBRC  &kp RBRC  &none   &kp TILDE &none
-                                               &none        &none         &none         &sk LCTRL &sk LSHIFT &sk LGUI
+                                               &none        &none         &none         &sk LCTRL &trans    &sk LGUI
             >;
         };
 
@@ -281,7 +281,7 @@ ZMK_BEHAVIOR(lt_fast, hold_tap,
        &none        &kp N1       &kp N2       &kp N3       &kp N4       &kp N5             &kp N6       &kp N7       &kp N8       &kp N9       &kp N0       &none
        &none        &sk LALT     &sk LGUI     &sk LSHIFT   &sk LCTRL    &sk HYPER          &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp BSPC    &none
        &none        &none        &none        &none        &sk RALT     &sk MEH            &none        &mkp LCLK    &mkp RCLK    &mkp MCLK    &kp DELETE  &none
-                                                          &none        &kp CAPS     &caps_word         &none        &none        &none
+                                                          &kp CAPS    &trans       &caps_word         &none        &none        &none
             >;
         };
 
