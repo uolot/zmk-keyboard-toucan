@@ -78,6 +78,8 @@ parse_config:
       "&lt MISC TAB": { t: Tab, h: Misc },
       "&mt LSHFT SEMI": { t: ";", h: Sft },
       "&lt NAV SPACE": { t: Space, h: Nav },
+      "&td_comma_under": { t: ",", h: "_" },
+      "&td_dot_space": { t: ".", h: Space },
       "&sk LALT": { t: Alt, h: sticky },
       "&sk LGUI": { t: Cmd, h: sticky },
       "&sk LSHIFT": { t: Sft, h: sticky },

@@ -167,6 +167,20 @@ ZMK_BEHAVIOR(layer_hold_quick_layer, hold_tap,
             tapping-term-ms = <200>;
             bindings = <&mo>, <&tog>;
         };
+
+        td_comma_under: tap_dance_comma_under {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp COMMA>, <&kp UNDER>;
+        };
+
+        td_dot_space: tap_dance_dot_space {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp DOT>, <&kp SPACE>;
+        };
     };
 
     combos {
@@ -329,7 +343,7 @@ ZMK_BEHAVIOR(layer_hold_quick_layer, hold_tap,
             bindings = <
        &none        &kp N1       &kp N2       &kp N3       &kp N4       &kp N5             &kp N6       &kp N7       &kp N8       &kp N9       &kp N0       &none
        &none        &sk LALT     &sk LGUI     &sk LSHIFT   &sk LCTRL    &sk HYPER          &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp RET      &none
-       &none        &none        &none        &none        &sk RALT     &sk MEH            &kp DELETE   &kp BSPC     &none        &none        &none        &none
+       &none        &none        &none        &none        &sk RALT     &sk MEH            &kp DELETE   &kp BSPC     &kp PG_DN    &kp PG_UP    &none        &none
                                                           &none        &kp CAPS     &caps_word         &none        &none        &none
             >;
         };
@@ -337,9 +351,9 @@ ZMK_BEHAVIOR(layer_hold_quick_layer, hold_tap,
         misc_layer {
             display-name = "MISC";
             bindings = <
-       &none       &sl FUNC    &kp LG(W)  &kp LG(L)       &kp LG(R)       &kp LG(T)          &none           &none           &none         &none            &none            &none
-       &none       &kp NAVBACK &kp NAVFWD &kp HOME        &kp END         &kp LG(LS(T))      &none           &none           &none         &none            &none            &none
-       &none       &none       &none      &kp PREVTAB     &kp NEXTTAB     &kp LG(N)          &none           &kp PG_DN       &kp PG_UP     &none            &none            &none
+       &none       &sl FUNC    &kp LG(W)  &kp LG(L)       &kp LG(R)       &kp LG(T)          &kp F1          &kp F2          &kp F3       &kp F4          &none            &none
+       &none       &kp NAVBACK &kp NAVFWD &kp HOME        &kp END         &kp LG(LS(T))      &kp F5          &kp F6          &kp F7       &kp F8          &none            &none
+       &none       &none       &none      &kp PREVTAB     &kp NEXTTAB     &kp LG(N)          &kp F9          &kp F10         &kp F11      &kp F12         &none            &none
                                           &none           &none           &none              &none           &none           &none
             >;
         };
@@ -348,18 +362,18 @@ ZMK_BEHAVIOR(layer_hold_quick_layer, hold_tap,
             display-name = "NUMP";
             bindings = <
        &none        &none        &none        &none        &none        &none              &kp KP_PLUS  &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp KP_ASTR  &none
-       &none        &none        &none        &kp COMMA    &none        &kp SPACE          &kp KP_MINUS &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp KP_EQUAL &none
+       &none        &none        &none        &none        &none        &none              &kp KP_MINUS &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp KP_EQUAL &none
        &none        &none        &none        &none        &none        &none              &kp COLON    &kp KP_N1    &kp KP_N2    &kp KP_N3    &kp KP_SLASH &none
-                                                          &none        &kp UNDER    &kp SPACE          &kp COMMA    &kp DOT      &kp KP_N0
+                                                          &none        &none        &none              &td_comma_under &td_dot_space &kp KP_N0
             >;
         };
 
         func_layer {
             display-name = "FUNC";
             bindings = <
-       &none        &none        &out OUT_USB &out OUT_BLE &none        &bt BT_CLR         &kp F1       &kp F2       &kp F3       &kp F4       &none        &none
-       &none        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &kp F5       &kp F6       &kp F7       &kp F8       &none        &none
-       &none        &none        &studio_unlock &none      &none        &none              &kp F9       &kp F10      &kp F11      &kp F12      &none        &none
+       &none        &none        &out OUT_USB &out OUT_BLE &none        &bt BT_CLR         &none        &none        &none        &none        &none        &none
+       &none        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &none        &none        &none        &none        &none        &none
+       &none        &none        &studio_unlock &none      &none        &none              &none        &none        &none        &none        &none        &none
                                                        &none        &none        &none              &none        &none        &none
             >;
         };
