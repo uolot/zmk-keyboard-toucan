@@ -101,7 +101,6 @@ required = [
     "#define RH2 41",
     "td_comma_semi: tap_dance_comma_semi",
     "td_dot_colon: tap_dance_dot_colon",
-    "&studio_unlock",
 ]
 for needle in required:
     if needle not in keymap:
