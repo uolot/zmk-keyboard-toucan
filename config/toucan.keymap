@@ -146,6 +146,14 @@ ZMK_BEHAVIOR(lt_fast, hold_tap,
     bindings = <&mo>, <&kp>;
 )
 
+/* hold for primary layer, tap-then-hold for secondary layer */
+ZMK_BEHAVIOR(layer_hold_quick_layer, hold_tap,
+    flavor = "hold-preferred";
+    tapping-term-ms = <200>;
+    quick-tap-ms = <200>;
+    bindings = <&mo>, <&mo>;
+)
+
 &mt {
     tapping-term-ms = <150>;
 };
@@ -163,46 +171,6 @@ ZMK_BEHAVIOR(lt_fast, hold_tap,
 
     combos {
         compatible = "zmk,combos";
-
-        sys_reset_left {
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
-            key-positions = <LM0 LM1 LM2 LM3>;
-            bindings = <&sys_reset>;
-            layers = <BASE SYMB NAV MISC NUMP FUNC>;
-        };
-
-        sys_reset_right {
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
-            key-positions = <RM1 RM2 RM3 RM4>;
-            bindings = <&sys_reset>;
-            layers = <BASE SYMB NAV MISC NUMP FUNC>;
-        };
-
-        soft_off_left {
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
-            key-positions = <LT0 LT1 LT2 LT3>;
-            bindings = <&soft_off>;
-            layers = <BASE SYMB NAV MISC NUMP FUNC>;
-        };
-
-        soft_off_right {
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
-            key-positions = <RT1 RT2 RT3 RT4>;
-            bindings = <&soft_off>;
-            layers = <BASE SYMB NAV MISC NUMP FUNC>;
-        };
-
-        combo_numpad {
-            timeout-ms = <30>;
-            require-prior-idle-ms = <150>;
-            key-positions = <LM3 LM4>;
-            bindings = <&mo_tog NUMP NUMP>;
-            layers = <BASE NUMP>;
-        };
 
         combo_enter_left {
             timeout-ms = <30>;
@@ -342,7 +310,7 @@ ZMK_BEHAVIOR(lt_fast, hold_tap,
        &none        &kp Q        &kp W        &kp E          &kp R             &kp T              &kp Y           &kp U        &kp I          &kp O       &kp P         &none
        &none        &hml LALT A  &hml LGUI S  &hml_s LSHFT D &hml LCTRL F      &hml HYPER G       &hmr HYPER H    &hmr LCTRL J &hmr_s LSHFT K &hmr LGUI L &hmr LALT RET &none
        &none        &kp Z        &kp X        &kp C          &hml RALT V       &hml MEH B         &hmr MEH N      &hmr RALT M  &kp COMMA      &kp DOT     &kp FSLH      &none
-                                                            &none             &lt_fast SYMB ESC  &lt MISC TAB    &mt LSHFT SEMI &lt NAV SPACE &none
+                                                            &layer_hold_quick_layer SYMB NUMP &kp ESC  &lt MISC TAB    &mt LSHFT SEMI &lt NAV SPACE &none
             >;
         };
 
@@ -369,29 +337,29 @@ ZMK_BEHAVIOR(lt_fast, hold_tap,
         misc_layer {
             display-name = "MISC";
             bindings = <
-       &none       &sl FUNC    &kp LG(W)  &kp LG(L)       &kp LG(R)       &kp LG(T)          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none            &none
-       &none       &kp NAVBACK &kp NAVFWD &kp HOME        &kp END         &kp LG(LS(T))      &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &mkp LCLK        &none
+       &none       &sl FUNC    &kp LG(W)  &kp LG(L)       &kp LG(R)       &kp LG(T)          &none           &none           &none         &none            &none            &none
+       &none       &kp NAVBACK &kp NAVFWD &kp HOME        &kp END         &kp LG(LS(T))      &none           &none           &none         &none            &none            &none
        &none       &none       &none      &kp PREVTAB     &kp NEXTTAB     &kp LG(N)          &none           &kp PG_DN       &kp PG_UP     &none            &none            &none
-                                          &none           &none           &none              &mkp RCLK       &mkp MCLK       &none
+                                          &none           &none           &none              &none           &none           &none
             >;
         };
 
         numpad_layer {
             display-name = "NUMP";
             bindings = <
-       &none        &tog NUMP    &none        &none        &none        &none              &kp KP_PLUS  &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp KP_ASTR  &none
-       &none        &none        &none        &kp COMMA    &none        &none              &kp KP_MINUS &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp KP_EQUAL &none
-       &none        &none        &none        &none        &none        &none              &kp DOT      &kp KP_N1    &kp KP_N2    &kp KP_N3    &kp KP_SLASH &none
-                                                          &none        &kp UNDER    &kp SPACE          &kp COLON    &kp KP_N0    &none
+       &none        &none        &none        &none        &none        &none              &kp KP_PLUS  &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp KP_ASTR  &none
+       &none        &none        &none        &kp COMMA    &none        &kp SPACE          &kp KP_MINUS &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp KP_EQUAL &none
+       &none        &none        &none        &none        &none        &none              &kp COLON    &kp KP_N1    &kp KP_N2    &kp KP_N3    &kp KP_SLASH &none
+                                                          &none        &kp UNDER    &kp SPACE          &kp COMMA    &kp DOT      &kp KP_N0
             >;
         };
 
         func_layer {
             display-name = "FUNC";
             bindings = <
-       &none        &sl BASE     &out OUT_USB &out OUT_BLE &none        &bt BT_CLR         &kp F10      &kp F7       &kp F8       &kp F9       &none        &none
-       &none        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &kp F11      &kp F4       &kp F5       &kp F6       &none        &none
-       &none        &bootloader  &studio_unlock &none      &none        &none              &kp F12      &kp F1       &kp F2       &kp F3       &bootloader  &none
+       &none        &none        &out OUT_USB &out OUT_BLE &none        &bt BT_CLR         &kp F1       &kp F2       &kp F3       &kp F4       &none        &none
+       &none        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4       &kp F5       &kp F6       &kp F7       &kp F8       &none        &none
+       &none        &none        &studio_unlock &none      &none        &none              &kp F9       &kp F10      &kp F11      &kp F12      &none        &none
                                                        &none        &none        &none              &none        &none        &none
             >;
         };
