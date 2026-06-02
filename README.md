@@ -2,6 +2,10 @@
 
 [The beekeeb Toucan Keyboard](https://beekeeb.com/toucan-keyboard/) is a wireless split 42-key column‑stagger keyboard that a display and a trackpad, with an aggressive stagger on the pinky columns.
 
+## Keymap
+
+![keymap](./keymap-drawer/toucan.svg)
+
 # License
 
 The code in this repo is available under the MIT license.
