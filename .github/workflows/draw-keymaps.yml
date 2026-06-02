@@ -16,3 +16,5 @@ jobs:
       contents: write
     with:
       keymap_patterns: "config/*.keymap"
+      config_path: "keymap_drawer.config.yaml"
+      output_folder: "keymap-drawer"

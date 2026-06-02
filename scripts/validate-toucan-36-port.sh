@@ -83,7 +83,7 @@ compact = " ".join(
     " ".join(line.split("//", 1)[0].split())
     for line in base_body.splitlines()
 )
-expected_thumb = "&lt_fast SYMB ESC &kp ESC &lt NUMP TAB &kp LSHFT &mo NAV &kp SPACE"
+expected_thumb = "&kp ESC &mo SYMB &lt NUMP TAB &kp LSHFT &mo NAV &kp SPACE"
 if expected_thumb not in compact:
     print("FAIL: base layer thumb row does not match selected mapping", file=sys.stderr)
     sys.exit(1)
