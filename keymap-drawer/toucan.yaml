@@ -33,8 +33,8 @@ layers:
   - {t: B, h: Meh}
   - {t: N, h: Meh}
   - {t: M, h: AltGr}
-  - ','
-  - .
+  - {t: ',', h: ;}
+  - {t: ., h: ':'}
   - /
   - ''
   - Esc
@@ -109,7 +109,7 @@ layers:
   - DOWN
   - UP
   - RIGHT
-  - RET
+  - ''
   - ''
   - ''
   - ''
@@ -156,7 +156,7 @@ layers:
   - KP 4
   - KP 5
   - KP 6
-  - KP EQUAL
+  - RET
   - ''
   - ''
   - ''
@@ -164,7 +164,7 @@ layers:
   - Ctl+Sft+TAB
   - Ctl+TAB
   - Cmd+N
-  - ':'
+  - KP EQUAL
   - KP 1
   - KP 2
   - KP 3
@@ -187,7 +187,7 @@ layers:
   - F2
   - F3
   - F4
-  - ''
+  - VOL UP
   - ''
   - ''
   - {t: BT, h: '0'}
@@ -199,27 +199,25 @@ layers:
   - F6
   - F7
   - F8
+  - VOL DN
   - ''
   - ''
-  - ''
-  - ''
-  - 'Studio
-
-    unlock'
-  - ''
-  - ''
-  - ''
+  - BRI UP
+  - BRI DN
+  - PREV
+  - PLAY PAUSE
+  - NEXT
   - F9
   - F10
   - F11
   - F12
+  - MUTE
   - ''
   - ''
+  - {type: held}
   - ''
   - ''
-  - ''
-  - ''
-  - ''
+  - {type: held}
   - ''
 combos:
 - p: [15, 16]
@@ -245,28 +243,4 @@ combos:
   l: [BASE]
 - p: [26, 27, 28]
   k: Cmd+A
-  l: [BASE]
-- p: [31, 32, 33]
-  k: MUTE
-  l: [BASE]
-- p: [31, 32]
-  k: VOL DN
-  l: [BASE]
-- p: [32, 33]
-  k: VOL UP
-  l: [BASE]
-- p: [6, 7]
-  k: PREV
-  l: [BASE]
-- p: [7, 8]
-  k: PLAY PAUSE
-  l: [BASE]
-- p: [8, 9]
-  k: NEXT
-  l: [BASE]
-- p: [3, 4]
-  k: BRI DN
-  l: [BASE]
-- p: [2, 3]
-  k: BRI UP
   l: [BASE]
