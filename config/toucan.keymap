@@ -172,6 +172,20 @@ ZMK_BEHAVIOR(lt_fast, hold_tap,
             tapping-term-ms = <200>;
             bindings = <&kp DOT>, <&kp COLON>;
         };
+
+        td_kp_plus_minus: tap_dance_kp_plus_minus {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp KP_PLUS>, <&kp KP_MINUS>;
+        };
+
+        td_kp_aster_slash: tap_dance_kp_aster_slash {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp KP_ASTR>, <&kp KP_SLASH>;
+        };
     };
 
     combos {
@@ -260,7 +274,7 @@ ZMK_BEHAVIOR(lt_fast, hold_tap,
             bindings = <
        &none        &kp Q        &kp W        &kp E          &kp R             &kp T              &kp Y           &kp U        &kp I          &kp O       &kp P         &none
        &none        &hml LALT A  &hml LGUI S  &hml_s LSHFT D &hml LCTRL F      &hml HYPER G       &hmr HYPER H    &hmr LCTRL J &hmr_s LSHFT K &hmr LGUI L &hmr LALT RET &none
-       &none        &kp Z        &kp X        &kp C          &hml RALT V       &hml MEH B         &hmr MEH N      &hmr RALT M  &td_comma_semi &td_dot_colon &kp FSLH      &none
+       &none        &kp Z        &kp X        &kp C          &hml RALT V       &hml MEH B         &hmr MEH N      &hmr RALT M  &td_comma_semi &td_dot_colon &kp BSPC      &none
                                                             &kp ESC         &mo SYMB &lt NUMP TAB    &kp LSHFT       &mo NAV        &kp SPACE
             >;
         };
@@ -268,9 +282,9 @@ ZMK_BEHAVIOR(lt_fast, hold_tap,
         symbols_layer {
             display-name = "SYMB";
             bindings = <
-       &none  &kp EXCL  &kp AT       &kp GRAVE  &kp CARET  &kp DLLR      &kp QUESTION  &kp LBKT  &kp RBKT  &none   &none      &none
+       &none  &kp EXCL  &kp AT       &kp GRAVE  &kp CARET  &kp DLLR      &kp QUESTION  &kp LBKT  &kp RBKT  &kp FSLH &kp TILDE &none
        &none  &kp PIPE  &kp AMPS     &kp DQT    &kp MINUS  &kp EQUAL     &kp STAR      &kp LPAR  &kp RPAR  &kp LT  &kp GT    &none
-       &none  &kp BSLH  &kp PERCENT  &kp SQT    &kp UNDER  &kp PLUS      &kp HASH      &kp LBRC  &kp RBRC  &none   &kp TILDE &none
+       &none  &kp BSLH  &kp PERCENT  &kp SQT    &kp UNDER  &kp PLUS      &kp HASH      &kp LBRC  &kp RBRC  &none   &kp BSPC  &none
                                                &none        &none         &none         &sk LCTRL &trans    &sk LGUI
             >;
         };
@@ -279,8 +293,8 @@ ZMK_BEHAVIOR(lt_fast, hold_tap,
             display-name = "NAV";
             bindings = <
        &none        &kp N1       &kp N2       &kp N3       &kp N4       &kp N5             &kp N6       &kp N7       &kp N8       &kp N9       &kp N0       &none
-       &none        &sk LALT     &sk LGUI     &sk LSHIFT   &sk LCTRL    &sk HYPER          &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp BSPC    &none
-       &none        &none        &none        &none        &sk RALT     &sk MEH            &none        &mkp LCLK    &mkp RCLK    &mkp MCLK    &kp DELETE  &none
+       &none        &sk LALT     &sk LGUI     &sk LSHIFT   &sk LCTRL    &sk HYPER          &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp DELETE  &none
+       &none        &none        &none        &none        &sk RALT     &sk MEH            &none        &mkp LCLK    &mkp RCLK    &mkp MCLK    &kp BSPC    &none
                                                           &kp CAPS    &trans       &caps_word         &none        &none        &none
             >;
         };
@@ -288,10 +302,10 @@ ZMK_BEHAVIOR(lt_fast, hold_tap,
         numpad_layer {
             display-name = "NUMP";
             bindings = <
-       &none        &none        &kp LG(W)    &kp LG(L)    &kp LG(R)    &kp LG(T)          &kp KP_PLUS  &kp KP_N7    &kp KP_N8    &kp KP_N9    &kp KP_ASTR  &none
-       &none        &kp NAVBACK  &kp NAVFWD   &kp HOME     &kp END      &kp LG(LS(T))      &kp KP_MINUS &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp RET      &none
-       &none        &kp PG_UP    &kp PG_DN    &kp PREVTAB  &kp NEXTTAB  &kp LG(N)          &kp KP_EQUAL &kp KP_N1    &kp KP_N2    &kp KP_N3    &kp KP_SLASH &none
-                                                          &none        &none        &none              &td_comma_semi &td_dot_colon &kp KP_N0
+       &none        &none        &kp LG(W)    &kp LG(L)    &kp LG(R)    &kp LG(T)          &td_kp_plus_minus &kp KP_N7    &kp KP_N8    &kp KP_N9    &td_kp_aster_slash &none
+       &none        &kp NAVBACK  &kp NAVFWD   &kp HOME     &kp END      &kp LG(LS(T))      &kp KP_EQUAL &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp RET      &none
+       &none        &kp PG_UP    &kp PG_DN    &kp PREVTAB  &kp NEXTTAB  &kp LG(N)          &td_comma_semi &kp KP_N1    &kp KP_N2    &kp KP_N3    &kp BSPC     &none
+                                                          &none        &none        &none              &td_dot_colon &kp KP_N0    &kp SPACE
             >;
         };
 
