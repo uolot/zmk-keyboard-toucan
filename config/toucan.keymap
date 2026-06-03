@@ -293,8 +293,8 @@ ZMK_BEHAVIOR(lt_fast, hold_tap,
             display-name = "NAV";
             bindings = <
        &none        &kp N1       &kp N2       &kp N3       &kp N4       &kp N5             &kp N6       &kp N7       &kp N8       &kp N9       &kp N0       &none
-       &none        &sk LALT     &sk LGUI     &sk LSHIFT   &sk LCTRL    &sk HYPER          &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &kp DELETE  &none
-       &none        &none        &none        &none        &sk RALT     &sk MEH            &none        &mkp LCLK    &mkp RCLK    &mkp MCLK    &kp BSPC    &none
+       &none        &sk LALT     &sk LGUI     &sk LSHIFT   &sk LCTRL    &sk HYPER          &kp LEFT     &kp DOWN     &kp UP       &kp RIGHT    &none       &none
+       &none        &none        &none        &none        &sk RALT     &sk MEH            &none        &mkp LCLK    &mkp RCLK    &mkp MCLK    &kp DELETE  &none
                                                           &kp CAPS    &trans       &caps_word         &none        &none        &none
             >;
         };
