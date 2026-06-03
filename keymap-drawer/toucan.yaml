@@ -149,8 +149,8 @@ layers:
   - ''
   - Cmd+[
   - Cmd+]
-  - HOME
-  - END
+  - PG UP
+  - PG DN
   - Cmd+Sft+T
   - KP EQUAL
   - KP 4
@@ -159,8 +159,8 @@ layers:
   - RET
   - ''
   - ''
-  - PG UP
-  - PG DN
+  - HOME
+  - END
   - Ctl+Sft+TAB
   - Ctl+TAB
   - Cmd+N
@@ -244,3 +244,9 @@ combos:
 - p: [26, 27, 28]
   k: Cmd+A
   l: [BASE]
+- p: [19, 20]
+  k: PG UP
+  l: [NAV]
+- p: [20, 21]
+  k: PG DN
+  l: [NAV]
