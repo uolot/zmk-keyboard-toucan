@@ -35,7 +35,7 @@ layers:
   - {t: M, h: AltGr}
   - {t: ',', h: ;}
   - {t: ., h: ':'}
-  - /
+  - BSPC
   - ''
   - Esc
   - SYMB
@@ -53,8 +53,8 @@ layers:
   - '?'
   - '['
   - ']'
-  - ''
-  - ''
+  - /
+  - '~'
   - ''
   - ''
   - '|'
@@ -78,7 +78,7 @@ layers:
   - '{'
   - '}'
   - ''
-  - '~'
+  - BSPC
   - ''
   - ''
   - {type: held}
@@ -109,7 +109,7 @@ layers:
   - DOWN
   - UP
   - RIGHT
-  - BSPC
+  - DELETE
   - ''
   - ''
   - ''
@@ -121,7 +121,7 @@ layers:
   - '&mkp LCLK'
   - '&mkp RCLK'
   - '&mkp MCLK'
-  - DELETE
+  - BSPC
   - ''
   - 'Caps
 
@@ -140,11 +140,11 @@ layers:
   - Cmd+L
   - Cmd+R
   - Cmd+T
-  - KP PLUS
+  - {t: +, h: '-'}
   - KP 7
   - KP 8
   - KP 9
-  - KP ASTERISK
+  - {t: '*', h: /}
   - ''
   - ''
   - Cmd+[
@@ -152,7 +152,7 @@ layers:
   - HOME
   - END
   - Cmd+Sft+T
-  - KP MINUS
+  - KP EQUAL
   - KP 4
   - KP 5
   - KP 6
@@ -164,18 +164,18 @@ layers:
   - Ctl+Sft+TAB
   - Ctl+TAB
   - Cmd+N
-  - KP EQUAL
+  - {t: ',', h: ;}
   - KP 1
   - KP 2
   - KP 3
-  - KP SLASH
+  - BSPC
   - ''
   - ''
   - ''
   - {type: held}
-  - {t: ',', h: ;}
   - {t: ., h: ':'}
   - KP 0
+  - Space
   FUNC:
   - ''
   - ''
