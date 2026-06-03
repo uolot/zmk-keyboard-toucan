@@ -41,7 +41,7 @@ layers:
   - SYMB
   - {t: TAB, h: NUMP}
   - Sft
-  - NAV
+  - {t: Space, h: NAV}
   - Space
   SYMB:
   - ''
@@ -112,15 +112,15 @@ layers:
   - ''
   - ''
   - ''
-  - ''
-  - ''
-  - ''
+  - '&mkp LCLK'
+  - '&mkp MCLK'
+  - '&mkp RCLK'
   - {t: AltGr, h: sticky}
   - {t: Meh, h: sticky}
   - ''
   - '&mkp LCLK'
-  - '&mkp RCLK'
   - '&mkp MCLK'
+  - '&mkp RCLK'
   - DELETE
   - ''
   - 'Caps
