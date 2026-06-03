@@ -109,7 +109,7 @@ layers:
   - DOWN
   - UP
   - RIGHT
-  - DELETE
+  - ''
   - ''
   - ''
   - ''
@@ -121,7 +121,7 @@ layers:
   - '&mkp LCLK'
   - '&mkp RCLK'
   - '&mkp MCLK'
-  - BSPC
+  - DELETE
   - ''
   - 'Caps
 
