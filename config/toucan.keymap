@@ -255,6 +255,22 @@ ZMK_BEHAVIOR(lt_fast, hold_tap,
             layers = <BASE>;
         };
 
+        combo_nav_page_up {
+            timeout-ms = <30>;
+            require-prior-idle-ms = <150>;
+            key-positions = <RM1 RM2>;
+            bindings = <&kp PG_UP>;
+            layers = <NAV>;
+        };
+
+        combo_nav_page_down {
+            timeout-ms = <30>;
+            require-prior-idle-ms = <150>;
+            key-positions = <RM2 RM3>;
+            bindings = <&kp PG_DN>;
+            layers = <NAV>;
+        };
+
     };
 
     conditional_layers {
@@ -303,8 +319,8 @@ ZMK_BEHAVIOR(lt_fast, hold_tap,
             display-name = "NUMP";
             bindings = <
        &none        &none        &kp LG(W)    &kp LG(L)    &kp LG(R)    &kp LG(T)          &td_kp_plus_minus &kp KP_N7    &kp KP_N8    &kp KP_N9    &td_kp_aster_slash &none
-       &none        &kp NAVBACK  &kp NAVFWD   &kp HOME     &kp END      &kp LG(LS(T))      &kp KP_EQUAL &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp RET      &none
-       &none        &kp PG_UP    &kp PG_DN    &kp PREVTAB  &kp NEXTTAB  &kp LG(N)          &td_comma_semi &kp KP_N1    &kp KP_N2    &kp KP_N3    &kp BSPC     &none
+       &none        &kp NAVBACK  &kp NAVFWD   &kp PG_UP    &kp PG_DN    &kp LG(LS(T))      &kp KP_EQUAL &kp KP_N4    &kp KP_N5    &kp KP_N6    &kp RET      &none
+       &none        &kp HOME     &kp END      &kp PREVTAB  &kp NEXTTAB  &kp LG(N)          &td_comma_semi &kp KP_N1    &kp KP_N2    &kp KP_N3    &kp BSPC     &none
                                                           &none        &none        &none              &td_dot_colon &kp KP_N0    &kp SPACE
             >;
         };
