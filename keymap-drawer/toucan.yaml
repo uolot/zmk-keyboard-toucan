@@ -40,7 +40,7 @@ layers:
   - Esc
   - SYMB
   - {t: TAB, h: NUMP}
-  - Sft
+  - {t: ;, h: Sft}
   - {t: Space, h: NAV}
   - Space
   SYMB:
@@ -83,9 +83,9 @@ layers:
   - ''
   - {type: held}
   - ''
-  - {t: Ctl, h: sticky}
+  - {t: ':', h: LCTRL}
   - {t: ▽, type: trans}
-  - {t: Cmd, h: sticky}
+  - {t: /, h: LGUI}
   NAV:
   - ''
   - '1'
